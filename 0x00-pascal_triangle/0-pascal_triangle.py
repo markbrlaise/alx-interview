@@ -1,15 +1,20 @@
 #!/usr/bin/python3
+"""Pascal's triangle interview challenge"""
 
 
 def fact(n):
+    """return the factorial of an integer to help
+    us get the coefficients"""
     if n == 0:
         return 1
     return n * fact(n - 1)
 
 
 def pascal_triangle(n):
+    """returns a list of lists representing
+    pascal's triangle"""
     if n <= 0:
-        return []
+        return ['']
 
     def pascal(n):
         c = 1
