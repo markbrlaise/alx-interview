@@ -17,9 +17,11 @@ def pascal_triangle(n):
         return ['']
 
     def pascal(n):
+        """returns a list of a row"""
         c = 1
         row = []
         for j in range(0, n+1):
+            # getting and appending the coeffients to the row
             c = fact(n) // ((fact(n - j) * fact(j)))
             row.append(c)
 
